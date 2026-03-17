@@ -1,7 +1,4 @@
 # Blue(Retired) HTB-CTF
-## Disclaimer
-This write-up is for educational purposes only.
-The machine is retired from Hack The Box and no longer active.
 ## Machine Information
 
 | Field | Value |
@@ -10,6 +7,10 @@ The machine is retired from Hack The Box and no longer active.
 | Difficulty | Easy |
 | OS | Windows |
 | Vulnerability | MS17-010 |
+## Disclaimer
+This write-up is for educational purposes only.
+<br>The machine is retired from Hack The Box and no longer active.
+
 ## Attack Path
 1. Perform a full TCP port scan
 2. Identify SMB service running on Windows 7 - 10
