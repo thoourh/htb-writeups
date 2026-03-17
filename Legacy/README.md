@@ -5,10 +5,9 @@
 | Field | Value |
 |------|------|
 | Machine Name | Legacy |
-| Platform | Hack The Box |
 | Difficulty | Easy |
 | OS | Windows |
-| IP | 10.129.x.x |
+| Vulnerability | MS08-067 |
 
 ---
 

@@ -2,6 +2,14 @@
 ## Disclaimer
 This write-up is for educational purposes only.
 The machine is retired from Hack The Box and no longer active.
+## Machine Information
+
+| Field | Value |
+|------|------|
+| Machine Name | Blue |
+| Difficulty | Easy |
+| OS | Windows |
+| Vulnerability | MS17-010 |
 ## Attack Path
 1. Perform a full TCP port scan
 2. Identify SMB service running on Windows 7 - 10
