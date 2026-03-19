@@ -72,7 +72,7 @@ The script `user.sh` was discovered in the `/cgi-bin/` directory.
 
 ![alt text](image-1.png)
 
-After discovering `user.sh` in the `/cgi-bin/` directory and observing that the output of the `uptime` command was returned in the HTTP response, I suspected the presence of the Shellshock vulnerability.
+After discovering `user.sh` in the `/cgi-bin/` directory and observing that the output of the `uptime` command was returned in the HTTP response, I suspected that the target might be vulnerable to Shellshock.
 
 
 ## Exploitation
@@ -97,6 +97,7 @@ uid=1000(shelly) gid=1000(shelly) groups=1000(shelly),4(adm),24(cdrom),30(dip),4
 ```
 ## Privilege Escalation
 After gaining an initial foothold, I executed the ```sudo -l``` command to identify any commands the current user could execute with root privileges.
+
 command: 
 ```
 sudo -l
@@ -135,21 +136,21 @@ root
 ```/root/root.txt```
 
 ## Vulnerability Analysis: 
-CVE-2014-6271, commonly known as Shellshock, is a remote code execution vulnerability in GNU Bash. Its core issue is that when Bash processes a string in an environment variable that looks like a function definition, it also executes any additional commands appended after the function definition.
+CVE-2014-6271, commonly known as Shellshock, is a remote code execution vulnerability in GNU Bash. The issue arises when Bash interprets an environment variable as a function definition and executes commands appended after it.
 
 ex:
 ```
 env x='() { :;}; echo vulnerable' bash -c "echo test"
 ```
-if Vulnerability is exist print ```vulnerable```
-if Vulnerability is not exist print ```echo test```
+if the system is vulnerable, it prints ```vulnerable```
+if the system is vulnerable, it prints ```echo test```
 ## Tools Used
 - Nmap
 - gobuster
 - burpsuite
 - python exploit
 ## References
-https://nvd.nist.gov/vuln/detail/CVE-2014-6247<br>
+https://nvd.nist.gov/vuln/detail/CVE-2014-6271<br>
 https://www.exploit-db.com/exploits/40619
 
 
